@@ -50,10 +50,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>vanilla\win32\include;vanilla\include;..\zlib\source;..\libpng\source;..\libpng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <PrecompiledHeader />
-      <SDLCheck>false</SDLCheck>
+      <WarningLevel>Level1</WarningLevel>
     </ClCompile>
     <PreBuildEvent>
       <Command>copy vanilla\win32\include\hpdf_config.h vanilla\include</Command>
@@ -63,9 +60,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>vanilla\win32\include;vanilla\include;..\zlib\source;..\libpng\source;..\libpng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <PrecompiledHeader />
-      <SDLCheck>false</SDLCheck>
+      <WarningLevel>Level1</WarningLevel>
     </ClCompile>
     <PreBuildEvent>
       <Command>copy vanilla\win32\include\hpdf_config.h vanilla\include</Command>
@@ -129,15 +124,6 @@
     <ClCompile Include="vanilla\src\hpdf_u3d.c" />
     <ClCompile Include="vanilla\src\hpdf_utils.c" />
     <ClCompile Include="vanilla\src\hpdf_xref.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\libpng\libpng.vcxproj">
-      <Project>{dfb51879-7539-420c-8ab5-38eddfe6ce1b}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="..\zlib\zlib.vcxproj">
-      <Project>{496e4f4a-6af1-4a8c-ad1b-9d50d02e2a91}</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
